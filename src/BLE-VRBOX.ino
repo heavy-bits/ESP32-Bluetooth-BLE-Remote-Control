@@ -47,6 +47,7 @@
 // can be moved to any GPIO pin (except LED, that is the builtin blue LED) that
 // is not input only.
 
+#include <Arduino.h>
 #include "BLEDevice.h"
 
 //------ VR Box Definitions -----
@@ -104,7 +105,8 @@ enum
 typedef void (*NotifyCallback)(BLERemoteCharacteristic*, uint8_t*, size_t, bool);
 
 // this is the service UUID of the VR Control handheld mouse/joystick device (HID)
-static BLEUUID serviceUUID("00001812-0000-1000-8000-00805f9b34fb");
+//static BLEUUID serviceUUID("00001812-0000-1000-8000-00805f9b34fb");
+static BLEUUID serviceUUID("00001801-0000-1000-8000-00805f9b34fb");
 
 // Battery Service UUID
 static BLEUUID BatteryServiceUUID("0000180F-0000-1000-8000-00805f9b34fb");
